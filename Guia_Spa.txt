@@ -1,0 +1,75 @@
+1º->	Ejecutar los sigueintes comandos;	
+	npm create vite@latest spa -- --template react-ts
+	cd spa
+	npm install
+	npm install bootstrap
+	npm install react-router-dom -->	necesaria para enrutar
+
+2º->	Borramos los archivos de siempre-> app.*, index.css
+
+3º->	Creamos una carpeta interfaces
+	Llamada-> Pais.interface.ts
+
+4º->	Creamos una carpeta -> pages
+
+5->	Creamos PaisesPage.tsx
+		ErrorPage.tsx
+		HomePage.tsx
+
+6º->	Creamos una carpeta componet al mismo nivel de interfaces
+
+7º->	Creamos un coponente->	CardPaises.tsx
+
+8º->	Ponemos contenido en PaisesPage,CardPaises,HomePage, main , ErrorPage
+
+9º->	Crear carpeta router al mismo nivel de interfaces
+
+10º->	Dentro de esa carpeta
+
+	Crear fichero AppRouter.tsx
+
+
+11º->	Ahora hay que integrar el AppRouter.tsx en la aplicación
+	Crear un componente dentro de src llamado MainApp.tsx
+	
+contenido MainApp
+
+	import { AppRouter } from './router/AppRouter';
+
+		export const MainApp = () => {
+		  return (
+		    <>
+		      <AppRouter />
+		    </>
+		  );
+		};
+
+12º->Cambiar el contenido del main.tsx
+	import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import { MainApp } from './MainApp';
+import 'bootstrap/dist/css/bootstrap.css';
+
+ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <MainApp />
+    </BrowserRouter>
+  </React.StrictMode>
+
+13º->	Crear dentro de componentes un fichero llamado Mapbar.tsx
+	Para ver Mapbar, la vamos a llamar en el router
+
+
+
+
+
+
+
+
+
+);
+	
+
+		
